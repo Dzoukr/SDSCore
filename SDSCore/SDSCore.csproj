@@ -9,22 +9,22 @@
         <PackageLicenseUrl>https://github.com/Dzoukr/SDSCore/blob/master/LICENSE</PackageLicenseUrl>
         <PackageTags>netcdf;sdslite;csv</PackageTags>
         <Authors>Roman Provazník</Authors>
-        <Version>1.0.0-alpha001</Version>
-        <PackageReleaseNotes>Initial port of SDSLite</PackageReleaseNotes>
-    </PropertyGroup>
-
-    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-      <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-      <DocumentationFile>bin\Debug\ScientificDataSet.xml</DocumentationFile>
-    </PropertyGroup>
-
-    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-      <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-      <DocumentationFile>bin\Release\ScientificDataSet.xml</DocumentationFile>
+        <Version>1.0.0-alpha003</Version>
+        <PackageReleaseNotes>Use different logic for finding related DLLs</PackageReleaseNotes>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <DocumentationFile>bin\$(Configuration)\netcoreapp3.1\SDSCore.xml</DocumentationFile>
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\NetCDFInterop\NetCDFInterop.csproj" />
+        <Reference Include="NetCDFInterop.dll">
+            <HintPath>..\NetCDFInterop\bin\$(Configuration)\netstandard2.0\NetCDFInterop.dll</HintPath>
+        </Reference>
+        <_PackageFiles Include="..\NetCDFInterop\bin\$(Configuration)\netstandard2.0\NetCDFInterop.dll">
+            <BuildAction>None</BuildAction>
+            <PackagePath>lib\netcoreapp3.1\</PackagePath>
+        </_PackageFiles>
+        <PackageReference Include="DynamicInterop" Version="0.9.1" />
+        <PackageReference Include="System.Security.Permissions" Version="4.7.0" />
     </ItemGroup>
 
 </Project>

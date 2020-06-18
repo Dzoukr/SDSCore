@@ -311,7 +311,7 @@ namespace Microsoft.Research.Science.Data.NetCDF4
                         throw new ResourceNotFoundException(fileName);
 
                     if (!Path.IsPathRooted(fileName))
-                        fileName = Path.Combine(Environment.CurrentDirectory, fileName);
+                        fileName = Path.Combine(EnvironmentHelper.CurrentLocation, fileName);
                     res = NetCDF.nc_create_chunked(fileName, CreateMode.NC_NETCDF4 | CreateMode.NC_CLOBBER /*| NetCDF.CreateMode.NC_SHARE*/, out ncid, new IntPtr(defaultCacheSize), new IntPtr(defaultCacheNElems), defaultCachePreemption);
 
                     Variable globalMetaVar = new NetCDFGlobalMetadataVariable(this);

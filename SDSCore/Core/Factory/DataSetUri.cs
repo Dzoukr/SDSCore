@@ -6,6 +6,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Reflection;
 using Microsoft.Research.Science.Data.Factory;
+using NetCDFInterop;
 
 namespace Microsoft.Research.Science.Data
 {
@@ -918,7 +919,7 @@ namespace Microsoft.Research.Science.Data
                             if (DataSetFactory.BaseUri != null)
                                 file = System.IO.Path.Combine(DataSetFactory.BaseUri, file);
                             else
-                                file = System.IO.Path.Combine(Environment.CurrentDirectory, file);
+                                file = System.IO.Path.Combine(EnvironmentHelper.CurrentLocation, file);
                         prop.SetValue(uri, file, null);
                     }
                 }
@@ -961,7 +962,7 @@ namespace Microsoft.Research.Science.Data
                             if (DataSetFactory.BaseUri != null)
                                 dir = System.IO.Path.Combine(DataSetFactory.BaseUri, dir);
                             else
-                                dir = System.IO.Path.Combine(Environment.CurrentDirectory, dir);
+                                dir = System.IO.Path.Combine(EnvironmentHelper.CurrentLocation, dir);
                         prop.SetValue(uri, dir, null);
                     }
                 }
@@ -1040,7 +1041,7 @@ namespace Microsoft.Research.Science.Data
                     if (DataSetFactory.BaseUri != null)
                         file = System.IO.Path.Combine(DataSetFactory.BaseUri, file);
                     else
-                        file = System.IO.Path.Combine(Environment.CurrentDirectory, file);
+                        file = System.IO.Path.Combine(EnvironmentHelper.CurrentLocation, file);
                 uri["file"] = file;
             }
         }
