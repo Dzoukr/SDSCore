@@ -9,8 +9,8 @@
         <PackageLicenseUrl>https://github.com/Dzoukr/SDSCore/blob/master/LICENSE</PackageLicenseUrl>
         <PackageTags>netcdf;sdslite;csv</PackageTags>
         <Authors>Roman Provazník</Authors>
-        <Version>1.0.0-alpha003</Version>
-        <PackageReleaseNotes>Use different logic for finding related DLLs</PackageReleaseNotes>
+        <Version>1.0.0</Version>
+        <PackageReleaseNotes>Releasing first version</PackageReleaseNotes>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <DocumentationFile>bin\$(Configuration)\netcoreapp3.1\SDSCore.xml</DocumentationFile>
     </PropertyGroup>
