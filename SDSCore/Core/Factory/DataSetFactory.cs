@@ -1147,10 +1147,7 @@ namespace Microsoft.Research.Science.Data.Factory
             }
             catch (Exception ex)
             {
-                if (ex is ConfigurationErrorsException)
-                    Trace.WriteLine("Registering assembly failed: " + ex.Message);
-                else
-                    Trace.WriteLineIf(dataSetTraceLevel == TraceLevel.Error, "Registering assembly failed: " + ex.Message);
+                Trace.WriteLine("Registering assembly failed: " + ex.Message);
             }
             return n;
         }

@@ -1,18 +1,17 @@
-<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp3.1</TargetFramework>
-        <UseWPF>true</UseWPF>
+        <TargetFrameworks>netstandard2.0;netcoreapp3.1</TargetFrameworks>
         <PackageId>SDSCore</PackageId>
-        <Description>.NET Core 3.1 port of SDSLite library</Description>
+        <Description>.NET Standard 2.0 / .NET Core 3.1 port of SDSLite library</Description>
         <RepositoryUrl>https://github.com/Dzoukr/SDSCore</RepositoryUrl>
         <PackageLicenseUrl>https://github.com/Dzoukr/SDSCore/blob/master/LICENSE</PackageLicenseUrl>
         <PackageTags>netcdf;sdslite;csv</PackageTags>
         <Authors>Roman Provazník</Authors>
-        <Version>1.0.0</Version>
-        <PackageReleaseNotes>Releasing first version</PackageReleaseNotes>
+        <Version>1.1.0</Version>
+        <PackageReleaseNotes>Retargeting to .NETStandard 2.0</PackageReleaseNotes>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-        <DocumentationFile>bin\$(Configuration)\netcoreapp3.1\SDSCore.xml</DocumentationFile>
+        <DocumentationFile>bin\$(Configuration)\netstandard2.0\SDSCore.xml</DocumentationFile>
     </PropertyGroup>
 
     <ItemGroup>
@@ -22,6 +21,10 @@
         <_PackageFiles Include="..\NetCDFInterop\bin\$(Configuration)\netstandard2.0\NetCDFInterop.dll">
             <BuildAction>None</BuildAction>
             <PackagePath>lib\netcoreapp3.1\</PackagePath>
+        </_PackageFiles>
+        <_PackageFiles Include="..\NetCDFInterop\bin\$(Configuration)\netstandard2.0\NetCDFInterop.dll">
+            <BuildAction>None</BuildAction>
+            <PackagePath>lib\netstandard2.0\</PackagePath>
         </_PackageFiles>
         <PackageReference Include="DynamicInterop" Version="0.9.1" />
         <PackageReference Include="System.Security.Permissions" Version="4.7.0" />
