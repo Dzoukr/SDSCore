@@ -8,8 +8,8 @@
         <PackageLicenseUrl>https://github.com/Dzoukr/SDSCore/blob/master/LICENSE</PackageLicenseUrl>
         <PackageTags>netcdf;sdslite;csv</PackageTags>
         <Authors>Roman Provazník</Authors>
-        <Version>1.1.0</Version>
-        <PackageReleaseNotes>Retargeting to .NETStandard 2.0</PackageReleaseNotes>
+        <Version>1.2.0</Version>
+        <PackageReleaseNotes>Adding support for MacOS platform</PackageReleaseNotes>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <DocumentationFile>bin\$(Configuration)\netstandard2.0\SDSCore.xml</DocumentationFile>
     </PropertyGroup>
